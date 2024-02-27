@@ -22,8 +22,8 @@ public class FirstServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// コンテンツタイプを指定
-//		response.setContentType("text/html; charset=UTF-8");
-		response.setContentType("ABCDE");
+		response.setContentType("text/html; charset=UTF-8");
+//		response.setContentType("ABCDE");
 		// PrintWriterインスタンスを生成する(newしない！ getWriter()を使う)
 		PrintWriter out = response.getWriter();
 		// PrintWriterインスタンスのprintln()でタグを記載
