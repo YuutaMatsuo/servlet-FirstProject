@@ -1,5 +1,6 @@
 package servlet;
 // サーブレット：webサーバー上（バックエンド）で動くJavaプログラム
+// プログラムに変更を加えたら、サーバーを再起動させる
 
 // ポイント①：複数のパッケージをインポートする！
 import java.io.IOException;
@@ -21,8 +22,9 @@ public class FirstServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// コンテンツタイプを指定
-		response.setContentType("text/html; charset=UTF-8");
-		// PrintWriterインスタンスを生成する
+//		response.setContentType("text/html; charset=UTF-8");
+		response.setContentType("ABCDE");
+		// PrintWriterインスタンスを生成する(newしない！ getWriter()を使う)
 		PrintWriter out = response.getWriter();
 		// PrintWriterインスタンスのprintln()でタグを記載
 		out.println("<html>");
